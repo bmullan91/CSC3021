@@ -33,14 +33,14 @@ public class Monitor {
 
     }
 
-    public synchronized void changeTyres(BillBen obj) {
+    public synchronized void changeTyres(BillBen person) {
 
         //using the toolbox...
 
-        if(obj.side == "left") {
+        if(person.side == "left") {
             System.out.println("Bill has changed the left!");
             this.leftTyresChanged = true;
-        } else if(obj.side == "right") {
+        } else if(person.side == "right") {
             System.out.println("Ben has changed the right!");
             this.rightTyresChanged = true;
         }
@@ -59,11 +59,11 @@ public class Monitor {
 
     }
 
-    public synchronized void checkTyres(BillBen obj) {
+    public synchronized void checkTyres(BillBen person) {
 
         try {
-            if((obj.side == "left" && this.leftTyresChanged) ||
-               (obj.side == "right" && this.rightTyresChanged)) {
+            if((person.side == "left" && this.leftTyresChanged) ||
+               (person.side == "right" && this.rightTyresChanged)) {
                 //Someones finished, waiting for the other
                 wait();
             }

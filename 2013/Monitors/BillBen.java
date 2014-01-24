@@ -2,7 +2,6 @@ public class BillBen extends Thread {
 
     private Monitor m;
     public String side;
-    private boolean jobToDo;
 
     public BillBen(Monitor mon, String side) {
         this.m = mon;
@@ -11,13 +10,13 @@ public class BillBen extends Thread {
 
     public void run() {
 
-            while(true) {
+        while(true) {
 
-                m.checkForAlonso();
-                m.changeTyres(this);
-                m.checkTyres(this);
+            m.checkForAlonso();
+            m.changeTyres(this);
+            m.checkTyres(this);
 
-            }
+        }
 
     }
 }
