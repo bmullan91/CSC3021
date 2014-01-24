@@ -64,7 +64,7 @@ public class Monitor {
         try {
             if((person.side == "left" && this.leftTyresChanged) ||
                (person.side == "right" && this.rightTyresChanged)) {
-                //Someones finished, waiting for the other
+                //This person is finished, waiting for the other
                 wait();
             }
 
