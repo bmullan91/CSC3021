@@ -1,5 +1,3 @@
-package Main;
-
 public class Monitor {
 
     private boolean inThePit = false;

@@ -1,5 +1,3 @@
-package Main;
-
 public class BillBen extends Thread {
 
     private Monitor m;
