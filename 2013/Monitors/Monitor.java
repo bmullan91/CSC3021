@@ -38,11 +38,11 @@ public class Monitor {
         //using the toolbox...
 
         if(person.side == "left") {
-            System.out.println("Bill has changed the left!");
             this.leftTyresChanged = true;
+            System.out.println("Bill has changed the left!");
         } else if(person.side == "right") {
-            System.out.println("Ben has changed the right!");
             this.rightTyresChanged = true;
+            System.out.println("Ben has changed the right!");
         }
 
     }
