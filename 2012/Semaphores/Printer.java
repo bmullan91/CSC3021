@@ -11,13 +11,16 @@ public class Printer extends Thread {
     public void run() {
         while(true) {
             System.out.println("Printer trying to print....");
-            int i = this.buffer.remove();
-            System.out.println("****************************\n\t Printed: "+i + "\n****************************");
+            printPage(buffer.remove());
             try {
                 this.sleep(1500);
             } catch (InterruptedException e) {}
 
         }
+    }
+
+    private void printPage(int p) {
+        System.out.println("****************************\n\t Printed: "+p + "\n****************************");
     }
 
 }

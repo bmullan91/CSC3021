@@ -15,9 +15,9 @@ public class Client extends Thread {
     public void run() {
 
         while(true) {
-            System.out.println("Client id:"+this.id+" waiting to add.....");
+            System.out.println("Client id:"+id+" waiting to add.....");
             this.buffer.add(generateDoc());
-            System.out.println("Client id: "+this.id+" successfully added to the buffer!");
+            System.out.println("Client id: "+id+" successfully added to the buffer!");
             try {
                 this.sleep(1000);
             } catch (InterruptedException e) {}
